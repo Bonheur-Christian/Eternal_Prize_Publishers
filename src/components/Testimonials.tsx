@@ -2,39 +2,40 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
     id: 1,
     name: "Dian Fossey",
     role: "Accountant",
-    image: "/profile.jpg",
+    image: "/images/profile.png",
     text: "Dian Fossey is an expert accountant with over 10 years of experience in financial management.",
   },
   {
     id: 2,
     name: "Jane Doe",
     role: "Designer",
-    image: "/profile.jpg",
+    image: "/images/profile.png",
     text: "Jane Doe is a creative designer specializing in UI/UX with a keen eye for detail.",
   },
   {
     id: 3,
     name: "John Smith",
     role: "Developer",
-    image: "/profile.jpg",
+    image: "/images/profile.png",
     text: "John Smith is a skilled full-stack developer with expertise in modern JavaScript frameworks.",
   },
   {
     id: 4,
     name: "Alice Johnson",
     role: "Marketing Specialist",
-    image: "/profile.jpg",
+    image: "/images/profile.png",
     text: "Alice Johnson is a marketing specialist with a passion for digital campaigns and branding.",
   },
 ];
 
-const Testimonial = () => {
+export default function Testimonial() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Auto-rotate every 4 seconds
@@ -51,27 +52,45 @@ const Testimonial = () => {
     setSelectedIndex(index);
   };
 
+  // Get the testimonials to display
+  const getDisplayedTestimonials = () => {
+    const start = selectedIndex;
+    const end = selectedIndex + 3;
+    if (end <= testimonials.length) {
+      return testimonials.slice(start, end);
+    } else {
+      return [
+        ...testimonials.slice(start),
+        ...testimonials.slice(0, end - testimonials.length),
+      ];
+    }
+  };
+
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-14 p-10 bg-gray-50">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-14 p-10">
       {/* Left: Testimonial Cards */}
       <div className="relative flex flex-col gap-6 w-[350px]">
-        {testimonials.slice(0, 3).map((testimonial, index) => {
-          const isActive = index === selectedIndex;
+        {getDisplayedTestimonials().map((testimonial, index) => {
+          const isActive = index === 0;
           return (
             <motion.div
               key={testimonial.id}
-              onClick={() => handleSelect(index)}
-              className={`w-full p-5 bg-white shadow-lg rounded-lg flex items-center space-x-4 cursor-pointer transition-all duration-500 ${
+              onClick={() =>
+                handleSelect((selectedIndex + index) % testimonials.length)
+              }
+              className={`w-full p-5 shadow-lg rounded-lg flex items-center space-x-4 cursor-pointer transition-all duration-1000 ${
                 isActive
-                  ? "scale-110 shadow-2xl border border-blue-500 translate-x-4" // Indented active card
+                  ? "scale-110 shadow-2xl border border-blue-500 translate-x-4 z-10" // Indented active card
                   : "opacity-80"
               }`}
               whileHover={{ scale: 1.05 }}
             >
-              <img
+              <Image
                 src={testimonial.image}
                 alt={testimonial.name}
                 className="w-14 h-14 rounded-full"
+                width={200}
+                height={200}
               />
               <div>
                 <h4 className="text-lg font-semibold">{testimonial.name}</h4>
@@ -102,5 +121,3 @@ const Testimonial = () => {
     </div>
   );
 };
-
-export default Testimonial;

@@ -1,10 +1,13 @@
-import Testimonial from "@/components/Testimonials";
+import Hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
+import Records from "@/components/Records";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <p>Hello from Bonheur</p>
-      <Testimonial />
+    <div className="">
+      <NavBar />
+      <Hero />
+      <Records/>
     </div>
   );
 }
