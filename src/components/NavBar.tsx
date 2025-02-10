@@ -9,7 +9,7 @@ export default function NavBar() {
     { label: "Contact", path: "/contact" },
   ];
   return (
-    <div className="top-0 sticky bg-white">
+    <div className="top-0 sticky bg-white z-50">
       <nav className="flex items-center justify-between px-10 py-6  border-b-2 border-b-[#D1F2F5]/30">
         <div className="mx-12">
           <a href="/">
