@@ -24,7 +24,7 @@ export default function Records() {
   ];
 
   return (
-    <div className="bg-[#5EDBDB]/10 ps-16 mt-10 py-12">
+    <div className="bg-[#5EDBDB]/10 ps-16 mt-10 py-12 ">
       <div className="w-[94%] ps-16 ">
         <h1 className="text-5xl font-semibold">Tracking Our Records</h1>
         <div className="flex py-24">
@@ -65,16 +65,18 @@ export default function Records() {
             ))}
           </div>
         </div>
-        <div>
-          <h2 className="text-[#3B9DF8] text-xl font-semibold text-center">
-            Some Reviews{" "}
-          </h2>
-          <p
-            className="text-4xl font-bold text-center"
-            style={{ fontFamily: "montserrat" }}
-          >
-            By Our Client
-          </p>
+        <div className="py-12" >
+          <div>
+            <h2 className="text-[#3B9DF8] text-xl font-semibold text-center">
+              Some Reviews{" "}
+            </h2>
+            <p
+              className="text-4xl font-bold text-center"
+              style={{ fontFamily: "montserrat" }}
+            >
+              By Our Client
+            </p>
+          </div>
           <Testimonial />
         </div>
       </div>

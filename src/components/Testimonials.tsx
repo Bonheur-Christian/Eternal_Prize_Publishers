@@ -67,7 +67,7 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-14 p-10">
+    <div className="flex items-center justify-around w-[94%] space-y-12   gap-32 py-16">
       {/* Left: Testimonial Cards */}
       <div className="relative flex flex-col gap-6 w-[350px]">
         {getDisplayedTestimonials().map((testimonial, index) => {
@@ -102,7 +102,7 @@ export default function Testimonial() {
       </div>
 
       {/* Timeline Divider */}
-      <div className="h-[200px] w-1 bg-gray-300 rounded-full hidden md:block"></div>
+      <div className="h-[400px] w-1 bg-gray-300 rounded-full hidden md:block"></div>
 
       {/* Right: Display Selected Testimonial */}
       <motion.div
