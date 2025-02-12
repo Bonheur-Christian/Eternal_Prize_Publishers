@@ -43,29 +43,28 @@ export default function Service() {
   ];
 
   return (
-    <div className="relative py-12 w-[94%] ps-16">
+    <div className="py-12 w-[94%] ps-16">
       <h1 className="text-5xl font-bold ps-16">Our Services</h1>
       <div className="flex "></div>
       <Swiper
-        className=" left-0 right-32 flex justify-end gap-8 px-6 mt-24 z-10 pb-32 custom-swiper"
+        className="flex justify-end gap-8 px-6 mt-24"
         spaceBetween={30}
         centeredSlides={false}
         slidesPerView={4}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
-          el: ".swiper-pagination",
         }}
         modules={[Autoplay, Pagination]}
       >
         {services.map((service, index) => (
           <SwiperSlide
             key={index}
-            className="text-center bg-white space-y-12 w-[20%] rounded-xl py-16 px-6 shadow-lg hover:-translate-y-12 duration-500"
+            className="border-2 border-gray-200 text-center space-y-12 rounded-xl py-24 px-6  hover:-translate-y-10 duration-500 z-50"
           >
             <FaBookOpenReader className="mx-auto" size={30} color="orange" />
             <h1 className="text-3xl text-[#5AA3E8] font-bold">
