@@ -1,3 +1,4 @@
+import Contact from "@/components/Contacts";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import Records from "@/components/Records";
@@ -8,8 +9,9 @@ export default function Home() {
     <div className="">
       <NavBar />
       <Hero />
-      <Records/>
-      <Services/>
+      <Records />
+      <Services />
+      <Contact />
     </div>
   );
 }
