@@ -7,7 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { BiUser } from "react-icons/bi";
 import Link from "next/link";
 
-const SearchBar = () => {
+export default function LibraryNavBar() {
   const [query, setQuery] = useState("");
 
   const libraryLinks = [
@@ -20,15 +20,17 @@ const SearchBar = () => {
   ];
 
   return (
-    <div className="w-[90%] mx-auto border-b-2 border-gray-400">
+    <div className="w-[90%] mx-auto border-b-2 border-slate-200 space-y-6 pt-10 pb-4">
       <div className="flex justify-between items-center">
         <div>
-          <Image
-            src="/svg/library.svg"
-            width={200}
-            height={100}
-            alt="Library section"
-          />
+          <Link href="/library">
+            <Image
+              src="/svg/library.svg"
+              width={200}
+              height={100}
+              alt="Library section"
+            />
+          </Link>
         </div>
         <div className="relative w-full max-w-lg">
           <BiSearch
@@ -53,12 +55,11 @@ const SearchBar = () => {
           <IoCartOutline size={30} color="gray" />
           <BiUser size={30} color="gray" />
         </div>
-
       </div>
       <div>
-        <ul className="flex items-center gap-4 justify-center">
-          {libraryLinks.map((link, index)=>(
-            <li key={index} className="text-lg font-semibold">
+        <ul className="flex items-center gap-12 justify-center ">
+          {libraryLinks.map((link, index) => (
+            <li key={index} className="font-medium underline-animation">
               <a href={link.destination}>{link.link}</a>
             </li>
           ))}
@@ -66,6 +67,4 @@ const SearchBar = () => {
       </div>
     </div>
   );
-};
-
-export default SearchBar;
+}

@@ -34,3 +34,19 @@ body {
   }
 }
 
+.thumb-custom::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px; 
+  height: 28px;
+  background-color: #3b82f6; 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.thumb-custom::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
