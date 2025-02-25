@@ -1,4 +1,5 @@
 import Books from "@/components/Book";
+import Dropdown from "@/components/DropDown";
 import LibraryNavBar from "@/components/LibraryNavBar";
 import LibrarySideBar from "@/components/LibrarySideBar";
 import Link from "next/link";
@@ -25,12 +26,7 @@ export default function Library() {
             <div className="flex justify-between items-center py-10">
               <div className="flex items-center gap-2">
                 <p>Shop By</p>
-                <select className="outline-none border-none cursor-pointer text-gray-400 text-sm custom-select">
-                  <option value="newest" className="px-12">Newest Books</option>
-                  <option value="retnding">Trending Books</option>
-                  <option value="religious">Religious Books</option>
-                  <option value="others">Others</option>
-                </select>
+                <Dropdown contents={["Newest Books", "Trending", "Old Books", "Year Of Release"]}/>
               </div>
             </div>
             <Books />
