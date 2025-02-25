@@ -25,7 +25,7 @@ export default function Library() {
             <div className="flex justify-between items-center py-10">
               <div className="flex items-center gap-2">
                 <p>Shop By</p>
-                <select className="outline-none -6 border-none cursor-pointer text-gray-400 text-sm">
+                <select className="outline-none border-none cursor-pointer text-gray-400 text-sm custom-select">
                   <option value="newest" className="px-12">Newest Books</option>
                   <option value="retnding">Trending Books</option>
                   <option value="religious">Religious Books</option>
