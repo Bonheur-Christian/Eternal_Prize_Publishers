@@ -3,6 +3,8 @@ import Dropdown from "@/components/DropDown";
 import LibraryNavBar from "@/components/LibraryNavBar";
 import LibrarySideBar from "@/components/LibrarySideBar";
 import Link from "next/link";
+import { CgMenuGridO } from "react-icons/cg";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 export default function Library() {
   return (
@@ -26,7 +28,18 @@ export default function Library() {
             <div className="flex justify-between items-center py-10">
               <div className="flex items-center gap-2">
                 <p>Shop By</p>
-                <Dropdown contents={["Newest Books", "Trending", "Old Books", "Year Of Release"]}/>
+                <Dropdown
+                  contents={[
+                    "Newest Books",
+                    "Trending",
+                    "Old Books",
+                    "Year Of Release",
+                  ]}
+                />
+              </div>
+              <div className="flex items-center gap-2 ">
+                <CgMenuGridO size={30} color="gray" />
+                <TfiMenuAlt size={30} color="gray"/>
               </div>
             </div>
             <Books />
