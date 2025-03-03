@@ -22,7 +22,8 @@ export default function LibraryNavBar() {
   return (
     <div className="w-[90%] mx-auto border-b-2 border-slate-200 space-y-6 pt-10 pb-4">
       <div className="flex justify-between items-center">
-        <div>
+        {/* Logo with Vibrating Dot */}
+        <div className="relative">
           <Link href="/library">
             <Image
               src="/svg/library.svg"
@@ -31,7 +32,11 @@ export default function LibraryNavBar() {
               alt="Library section"
             />
           </Link>
+          {/* Vibrating Dot */}
+          <span className="absolute top-2 right-0 w-3 h-3 bg-orange-500 rounded-full animate-pulseRing"></span>
         </div>
+
+        {/* Search Input */}
         <div className="relative w-full max-w-lg">
           <BiSearch
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -45,6 +50,8 @@ export default function LibraryNavBar() {
             className="w-full pl-12 pr-4 py-2 rounded-full outline-none border border-gray-200 focus:border-none focus:ring-2 focus:ring-blue-500 text-gray-700 shadow-sm"
           />
         </div>
+
+        {/* User & Cart Icons */}
         <div className="flex items-center gap-12">
           <Link
             href="/"
@@ -56,6 +63,8 @@ export default function LibraryNavBar() {
           <BiUser size={30} color="gray" />
         </div>
       </div>
+
+      {/* Navigation Links */}
       <div>
         <ul className="flex items-center gap-12 justify-center ">
           {libraryLinks.map((link, index) => (

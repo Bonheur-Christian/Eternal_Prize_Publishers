@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Quicksand, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Quicksand, Montserrat, Lato } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,6 +25,13 @@ const quicksand = Quicksand({
   display: "swap",
 });
 
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"], // Choose the weights you need
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Eternal Prize",
   description: "Book Publishing Company",
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.variable} ${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${quicksand.variable} ${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${lato.variable} antialiased`}
       >
         {children}
       </body>

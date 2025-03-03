@@ -12,6 +12,20 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        lato: ["lato", "sans-serif"],
+        montserrat: ["montserrat", "sans-serif"],
+      },
+
+      keyframes: {
+        pulseRing: {
+          "0%": { transform: "scale(1)", opacity: "0.6" },
+          "100%": { transform: "scale(2.5)", opacity: "0" },
+        },
+      },
+      animation: {
+        pulseRing: "pulseRing 2s infinite ease-out",
+      },
     },
   },
   plugins: [],

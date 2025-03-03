@@ -12,7 +12,7 @@ export  const books = [
       book: "/images/pathway.jpg",
       BookName: "Pathway",
       author: "Jimmy MUYANGO",
-      price: "$20",
+      price: "$222",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
@@ -20,7 +20,7 @@ export  const books = [
       book: "/images/pathway.jpg",
       BookName: "Pathway",
       author: "Jimmy MUYANGO",
-      price: "$20",
+      price: "$26",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
@@ -28,7 +28,7 @@ export  const books = [
       book: "/images/pathway.jpg",
       BookName: "Pathway",
       author: "Jimmy MUYANGO",
-      price: "$20",
+      price: "$29",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
@@ -36,7 +36,7 @@ export  const books = [
       book: "/images/pathway.jpg",
       BookName: "Pathway",
       author: "Jimmy MUYANGO",
-      price: "$20",
+      price: "$28",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
@@ -44,7 +44,7 @@ export  const books = [
       book: "/images/pathway.jpg",
       BookName: "Pathway",
       author: "Jimmy MUYANGO",
-      price: "$20",
+      price: "$201",
       rating: "⭐⭐⭐⭐⭐",
     },
   ];
