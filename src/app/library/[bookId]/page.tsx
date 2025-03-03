@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import LibraryNavBar from "@/components/LibraryNavBar";
 import { books } from "@/constants/Books";
 import Image from "next/image";
@@ -41,8 +42,8 @@ export default function BookDetails() {
       <div className="border-b-2 border-gray-200 sticky top-0 z-50 bg-white">
         <LibraryNavBar />
       </div>
-      <div className="flex w-[94%] mx-auto py-24 gap-10">
-        <div className="space-y-6 w-[60%]">
+      <div className="flex justify-between w-[94%] mx-auto py-24 ">
+        <div className="space-y-6 w-[20%]">
           <Image
             src={book?.book}
             alt={book?.BookName}
@@ -66,7 +67,7 @@ export default function BookDetails() {
             </button>
           </div>
         </div>
-        <div className=" w-full">
+        <div className=" w-[40%] space-y-4">
           <h1 className="text-3xl font-bold font-montserrat">
             Debt - first 500 years
           </h1>
@@ -95,13 +96,23 @@ export default function BookDetails() {
             explicabo sint laboriosam repudiandae laborum!
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-[22%] space-y-6 ">
           {books.map((book, index) => (
             <div key={index}>
-              <Image src={book.book} alt={book.BookName} width={350} height={600} />
+              <Image
+                src={book.book}
+                alt={book.BookName}
+                width={350}
+                height={600}
+                className="rounded overflow-y-auto"
+                title={book.BookName}
+              />
             </div>
           ))}
         </div>
+      </div>
+      <div className="pt-32">
+        <Footer />
       </div>
     </div>
   );
