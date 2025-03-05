@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 
 export default function NavBar() {
+  
   const Links = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
@@ -22,6 +25,7 @@ export default function NavBar() {
           </a>
         </div>
         <div className="">
+
           <ul className="flex justify-center gap-12 items-center">
             {Links.map((item, index) => (
               <li key={index} className="underline-animation">

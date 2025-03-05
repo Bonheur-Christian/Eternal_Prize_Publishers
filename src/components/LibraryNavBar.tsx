@@ -22,7 +22,6 @@ export default function LibraryNavBar() {
   return (
     <div className="w-[90%] mx-auto border-b-2 border-slate-200 space-y-6 pt-10 pb-4">
       <div className="flex justify-between items-center">
-        {/* Logo with Vibrating Dot */}
         <div className="relative">
           <Link href="/library">
             <Image
@@ -32,11 +31,10 @@ export default function LibraryNavBar() {
               alt="Library section"
             />
           </Link>
-          {/* Vibrating Dot */}
+        
           <span className="absolute top-2 right-0 w-3 h-3 bg-orange-500 rounded-full animate-pulseRing"></span>
         </div>
 
-        {/* Search Input */}
         <div className="relative w-full max-w-lg">
           <BiSearch
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"

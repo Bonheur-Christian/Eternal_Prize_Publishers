@@ -28,12 +28,12 @@ const quicksand = Quicksand({
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"], // Choose the weights you need
+  weight: ["300", "400", "700", "900"], 
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Eternal Prize",
+  title: "Eternal Life Publishers",
   description: "Book Publishing Company",
 };
 
