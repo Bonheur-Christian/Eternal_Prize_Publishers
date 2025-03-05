@@ -24,10 +24,10 @@ export default function Records() {
   ];
 
   return (
-    <div className="bg-[#5EDBDB]/10 ps-16 mt-10 py-12 ">
-      <div className="w-[94%] ps-16 ">
+    <div className="bg-[#5EDBDB]/10 ps-16 xs:ps-4 mt-10 py-12 ">
+      <div className="w-[94%] xs:w-full ps-16 ">
         <h1 className="text-5xl font-semibold">Tracking Our Records</h1>
-        <div className="flex py-24">
+        <div className="flex xs:flex-col py-24">
           <div className="w-[70%] space-y-4">
             <Image
               width={800}
@@ -45,9 +45,9 @@ export default function Records() {
               ducimus similique odit ullam? Minima, animi recusandae.
             </p>
           </div>
-          <div className="w-[60%] space-y-10">
+          <div className="w-[60%] xs:w-full space-y-10">
             {recentBooks.map((book, index) => (
-              <div className="flex items-center gap-6" key={index}>
+              <div className="flex  xs:flex-col items-center gap-6" key={index}>
                 <Image
                   src={book.image}
                   alt={book.title}

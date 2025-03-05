@@ -3,9 +3,9 @@ import { IoMdCompass } from "react-icons/io";
 
 export default function Hero() {
   return (
-    <div className="flex justify-between w-[94%] mx-auto gap-12 py-24 ps-16 pe-8">
-      <div className="w-[35%] space-y-24">
-        <h1 className=" text-5xl font-semibold">
+    <div className="flex xs:flex-col justify-between w-[94%] xs:w-full mx-auto gap-12 py-24 ps-16 pe-8">
+      <div className="w-[35%] xs:w-full space-y-24">
+        <h1 className="text-5xl xs:text-3xl font-semibold">
           Revolutionizing Shared{" "}
           <span className="block py-4">
             <Image

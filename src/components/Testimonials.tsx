@@ -67,9 +67,9 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="flex items-center justify-around w-[94%] space-y-12   gap-32 py-16">
+    <div className="flex xs:flex-col items-center justify-around w-[94%] xs:w-full space-y-12  gap-32 py-16">
       {/* Left: Testimonial Cards */}
-      <div className="relative flex flex-col gap-6 w-[350px]">
+      <div className="relative flex flex-col gap-6 w-[350px] xs:w-[100px]">
         {getDisplayedTestimonials().map((testimonial, index) => {
           const isActive = index === 0;
           return (
