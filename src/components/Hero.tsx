@@ -3,11 +3,11 @@ import { IoMdCompass } from "react-icons/io";
 
 export default function Hero() {
   return (
-    <div className="flex xs:flex-col justify-between w-[94%] xs:w-full mx-auto gap-12 py-24 ps-16 pe-8">
-      <div className="w-[35%] xs:w-full space-y-24">
+    <div className="flex xs:flex-col justify-between w-[94%] xs:w-full mx-auto gap-12 py-24 xs:py-12  ps-16 xs:ps-6 pe-8">
+      <div className="w-[35%] xs:w-full space-y-24 ">
         <h1 className="text-5xl xs:text-3xl font-semibold">
           Revolutionizing Shared{" "}
-          <span className="block py-4">
+          <span className="block py-4 xs:hidden">
             <Image
               src="/images/faceEmoji.png"
               alt="Face like emoji"
@@ -15,10 +15,10 @@ export default function Hero() {
               width={40}
               height={200}
             />
-            Property Ownership.
           </span>
+            Property Ownership.
         </h1>
-        <p className="text-lg pe-12">
+        <p className="text-lg pe-12 xs:pe-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, qui sed
           nam consectetur nobis, deserunt autem illo minima ex corporis vero
           eveniet, quisquam soluta accusamus. Est veritatis iusto vero in.
@@ -28,12 +28,13 @@ export default function Hero() {
           alt="Mountains"
           width={500}
           height={500}
+          className=""
         />
       </div>
 
-      <div className="w-[20%] space-y-20">
+      <div className="w-[20%] xs:w-full space-y-20">
         <img src="./images/users.png" alt="Users" width={100} height={100} />
-        <h2 className="text-5xl   font-semibold ms-[-10rem]">Experience</h2>
+        <h2 className="text-5xl xs:text-3xl   font-semibold ms-[-10rem] xs:ms-0">Experience</h2>
         <div className="shadow-xl shadow-gray-[#222222] px-6 py-4 space-y-4 rounded-xl">
           <div className="flex justify-between">
             <p className="text-xl w-[60%] font-semibold">
@@ -52,13 +53,13 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="w-[25%] space-y-20">
+      <div className="w-[25%] xs:w-full space-y-20">
         <img src="./images/building.png" alt="" />
-        <div className="flex gap-6 ite border-4 border-gray-200/60 rounded-xl shadow-lg shadow-gray-[#222222] w-[100%] h-[16%] py-2 px-4">
+        <div className="flex xs:flex-col gap-6 ite border-4 border-gray-200/60 rounded-xl shadow-lg shadow-gray-[#222222] w-[100%] xs:w-full xs:h-full h-[16%] py-2 px-4">
           <Image
             src="/images/building.png"
             alt=""
-            className=" w-1/4 rounded-xl"
+            className=" w-1/4 xs:w-1/2 rounded-xl"
             width={200}
             height={200}
           />

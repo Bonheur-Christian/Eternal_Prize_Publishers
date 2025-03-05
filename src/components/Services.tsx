@@ -47,15 +47,31 @@ export default function Service() {
   ];
 
   return (
-    <div className="py-12 w-[94%] ps-16">
-      <h1 className="text-5xl font-bold ps-16">Our Services</h1>
-      <div className="flex "></div>
-      <div className="ps-16 pb-52">
+    <div className="py-12 w-[94%] xs:w-full ps-16 xs:px-4">
+      <h1 className="text-5xl xs:text-2xl font-bold ps-16">Our Services</h1>
+      <div className="ps-16 xs:ps-0 pb-52">
         <Swiper
-          className="flex justify-end gap-8  mt-24"
+          className="flex xs:flex-col justify-end gap-8  mt-24"
           spaceBetween={30}
           centeredSlides={false}
-          slidesPerView={4}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
           loop={true}
           autoplay={{
             delay: 3000,
@@ -66,10 +82,10 @@ export default function Service() {
           {services.map((service, index) => (
             <SwiperSlide
               key={index}
-              className="border-2 border-gray-200 text-center space-y-12 rounded-xl py-24 px-6  hover:scale-105 duration-500 z-50"
+              className="border-2 border-gray-200 text-center space-y-12 rounded-xl py-24 xs:py-12 px-6 xs:px-2  hover:scale-105 duration-500 z-50"
             >
               <FaBookOpenReader className="mx-auto" size={30} color="orange" />
-              <h1 className="text-3xl text-[#5AA3E8] font-bold">
+              <h1 className="text-3xl xs:text-2xl text-[#5AA3E8] font-bold">
                 {service.service}
               </h1>
               <p>{service.description}</p>
@@ -85,10 +101,10 @@ export default function Service() {
         </div>
       </div>
 
-      <div className="ps-16 flex justify-between py-6">
-        <div className="w-[60%] space-y-8">
+      <div className="ps-16 xs:px-4 flex xs:flex-col justify-between py-6 xs:space-y-24">
+        <div className="w-[60%] xs:w-full space-y-8 xs:space-y-12">
           <h1 className="text-4xl font-bold">Library</h1>
-          <p className="text-4xl font-bold">
+          <p className="text-4xl xs:text-xl font-bold">
             Make Your Work Flow Faster And Easy To Understand Plus Simple And
             Efficient Working With.
           </p>
@@ -98,11 +114,11 @@ export default function Service() {
             id lacus sit amet eros tincidunt aliquetSed quis nisl vitae leo
             sagittis mattis. Fusce id lacus sit amet eros tincidunt aliquet.
           </p>
-          <div className="flex items-center gap-4">
-            <button className="rounded-xl bg-blue-500 border-2 border-blue-500 text-white px-4 py-2 font-semibold outline-none">
+          <div className="flex xs:flex-col xs:space-y-6 items-center gap-4">
+            <button className="rounded-xl bg-blue-500 border-2 border-blue-500 text-white px-4 xs:px-16 py-2 font-semibold outline-none">
               Get Started
             </button>
-            <button className="px-4 py-2 bg-gray-100 rounded-xl text-lg border-2 border-gray-200 font-semibold outline-none">
+            <button className="px-4 xs:px-14  py-2 bg-gray-100 rounded-xl text-lg border-2 border-gray-200 font-semibold outline-none">
               Explore More
             </button>
           </div>

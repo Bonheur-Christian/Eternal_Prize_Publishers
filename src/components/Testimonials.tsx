@@ -67,9 +67,8 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="flex xs:flex-col items-center justify-around w-[94%] xs:w-full space-y-12  gap-32 py-16">
-      {/* Left: Testimonial Cards */}
-      <div className="relative flex flex-col gap-6 w-[350px] xs:w-[100px]">
+    <div className="flex xs:flex-col items-center justify-around w-[94%] xs:w-full space-y-12  gap-32 xs:gap-2 py-16 xs:ps-[-2rem]">
+      <div className="flex flex-col gap-6 w-[350px] xs:w-[100px] xs:ms-[-100px]">
         {getDisplayedTestimonials().map((testimonial, index) => {
           const isActive = index === 0;
           return (
@@ -78,7 +77,7 @@ export default function Testimonial() {
               onClick={() =>
                 handleSelect((selectedIndex + index) % testimonials.length)
               }
-              className={`w-full p-5 shadow-lg rounded-lg flex items-center space-x-4 cursor-pointer transition-all duration-1000 ${
+              className={`w-full p-5 xs:p-4 shadow-lg rounded-lg flex  items-center space-x-4 xs:space-x-12 cursor-pointer transition-all duration-1000 ${
                 isActive
                   ? "scale-110 shadow-2xl border border-blue-500 translate-x-4 z-10" // Indented active card
                   : "opacity-80"
@@ -88,7 +87,7 @@ export default function Testimonial() {
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-14 h-14 rounded-full"
+                className="w-14 xs:w-full h-14 xs:h-full   rounded-full"
                 width={200}
                 height={200}
               />
@@ -101,10 +100,8 @@ export default function Testimonial() {
         })}
       </div>
 
-      {/* Timeline Divider */}
       <div className="h-[400px] w-1 bg-gray-300 rounded-full hidden md:block"></div>
 
-      {/* Right: Display Selected Testimonial */}
       <motion.div
         key={testimonials[selectedIndex].id}
         initial={{ opacity: 0, x: 50 }}

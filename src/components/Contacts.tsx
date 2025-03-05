@@ -3,10 +3,10 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function Contact() {
   return (
-    <div className="ps-32 py-24 space-y-24">
-      <h1 className="text-5xl font-bold ">Contacts</h1>
-      <div className="flex items-center gap-32">
-        <div className="space-y-8 py-16 px-10 shadow-sm rounded-xl border-2 border-gray-50 w-[25%]">
+    <div className="ps-32  xs:ps-6 py-24 space-y-24">
+      <h1 className="text-5xl xs:text-2xl font-bold ">Contacts</h1>
+      <div className="flex xs:flex-col items-center gap-32">
+        <div className="space-y-8 py-16 px-10 shadow-sm rounded-xl border-2 border-gray-50 w-[25%] xs:w-full">
           <div className="space-y-4  border-b-2  border-gray-200 pb-8">
             <div className="flex items-center gap-4">
               <FiPhoneCall

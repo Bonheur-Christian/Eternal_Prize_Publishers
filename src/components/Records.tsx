@@ -24,11 +24,11 @@ export default function Records() {
   ];
 
   return (
-    <div className="bg-[#5EDBDB]/10 ps-16 xs:ps-4 mt-10 py-12 ">
-      <div className="w-[94%] xs:w-full ps-16 ">
-        <h1 className="text-5xl font-semibold">Tracking Our Records</h1>
-        <div className="flex xs:flex-col py-24">
-          <div className="w-[70%] space-y-4">
+    <div className="bg-[#5EDBDB]/10 ps-16 xs:px-4 xs:ps-4 mt-10 py-12 ">
+      <div className="w-[94%] xs:w-full ps-16 xs:ps-4 ">
+        <h1 className="text-5xl xs:text-3xl font-semibold">Tracking Our Records</h1>
+        <div className="flex xs:flex-col xs:space-y-6 py-24">
+          <div className="w-[70%] xs:w-full space-y-4">
             <Image
               width={800}
               height={700}
@@ -38,7 +38,7 @@ export default function Records() {
             <p className="text-2xl font-semibold">
               Seeking Professional Financial Advice Guidance
             </p>
-            <p className="w-[80%] py-4">
+            <p className="w-[80%] xs:w-full py-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
               aliquam praesentium? Consequuntur quia asperiores repellendus
               eaque cupiditate, maiores voluptas id incidunt officia numquam
@@ -67,11 +67,11 @@ export default function Records() {
         </div>
         <div className="py-12" >
           <div>
-            <h2 className="text-[#3B9DF8] text-xl font-semibold text-center">
+            <h2 className="text-[#3B9DF8] text-xl xs:text-lg font-semibold text-center">
               Some Reviews{" "}
             </h2>
             <p
-              className="text-4xl font-bold text-center"
+              className="text-4xl xs:text-2xl font-bold text-center"
               style={{ fontFamily: "montserrat" }}
             >
               By Our Client
