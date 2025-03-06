@@ -23,13 +23,13 @@ export default function Footer() {
             alt="Eternal prize Logo"
             width={200}
             height={10}
-            className="ms-[-3.2rem]"
+            className="ms-[-3.2rem] xs:mx-auto"
           />
           <h1 className="text-white font-bold text-2xl w-[10%] xs:w-full pt-6">
             Eternal Life Publishers
           </h1>
         </div>
-        <div className="flex xs:flex-col items-center justify-between border-b-2 border-white py-12">
+        <div className="flex xs:flex-col items-center justify-between border-b-2 border-white xs:border-none py-12 xs:py-6">
           <ul className="flex xs:flex-col items-center gap-12">
             {Links.map((link, index) => (
               <li key={index} className="text-white font-medium text-lg footer-underline-animation">
@@ -38,13 +38,13 @@ export default function Footer() {
             ))}
           </ul>
           <div>
-            <button className="bg-white hover:bg-blue-500 hover:text-white duration-500 rounded-xl py-3 px-32 xs:px-16 text-xl font-semibold">
+            <button className="bg-white hover:bg-blue-500 hover:text-white duration-500 rounded-xl py-3 px-32 xs:px-20 text-xl  xs:mt-6 font-semibold">
               Subscribe
             </button>
           </div>
         </div>
         <div className="flex xs:flex-col-reverse items-center justify-between text-white py-12">
-          <p className="text-lg flex items-center font-semibold">
+          <p className="text-lg flex items-center xs:text-center xs:py-4 font-semibold">
             Copyrights &copy; All Rights Reserved
           </p>
           <ul className="flex xs:flex-col items-center gap-12">
