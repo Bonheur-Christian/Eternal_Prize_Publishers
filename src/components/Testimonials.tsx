@@ -79,7 +79,7 @@ export default function Testimonial() {
               }
               className={`w-full p-5 xs:p-4 shadow-lg rounded-lg flex  items-center space-x-4 xs:space-x-12 cursor-pointer transition-all duration-1000 ${
                 isActive
-                  ? "scale-110 shadow-2xl border border-blue-500 translate-x-4 z-10" // Indented active card
+                  ? "scale-110 shadow-2xl border border-blue-500 translate-x-4 z-10"
                   : "opacity-80"
               }`}
               whileHover={{ scale: 1.05 }}
@@ -111,10 +111,8 @@ export default function Testimonial() {
       >
         <span className="text-blue-500 text-3xl">❝</span>
         <p className="text-lg">{testimonials[selectedIndex].text}</p>
-        <div className="flex gap-1 mt-3 text-blue-500">
-          ⭐⭐⭐⭐⭐
-        </div>
+        <div className="flex gap-1 mt-3 text-blue-500">⭐⭐⭐⭐⭐</div>
       </motion.div>
     </div>
   );
-};
+}
