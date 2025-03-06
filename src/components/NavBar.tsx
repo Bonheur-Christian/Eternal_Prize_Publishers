@@ -50,11 +50,11 @@ export default function NavBar() {
             />
           </a>
         </div>
-        <div className="xs:w-full relative">
+        <div className="xs:w-full sm:w-1/2 relative">
             <ul
             className={`${
               isOpen
-                ? "bg-white sm:px-4 xs:py-12 xs:ps-2 xs:pe-64 xs:space-y-6 md:ms-[12rem] xs:ms-0 md:bg-white md:w-[100vw] xs:w-[10vw] sm:py-4  lg:w-[100vw] xs:min-h-screen z-50 top-[-3.5rem] xs:text-lg xs:font-medium "
+                ? "bg-white sm:px-4 xs:py-12 sm:py-6 xs:ps-2 xs:pe-64 sm:pe-0 xs:space-y-6 sm:ms-0 xs:ms-0 md:bg-white md:w-[100vw] xs:w-[10vw] sm:w-[47vw] sm:  lg:w-[100vw] xs:min-h-screen z-50 top-[-3.5rem] xs:text-lg xs:font-medium "
                 : "hidden duration-1000"
             } lg:flex lg:space-x-12 sm:space-y-4 lg:space-y-0 md:space-y-4  lg:top-5 absolute`}
           >
